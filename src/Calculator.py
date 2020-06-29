@@ -19,6 +19,10 @@ def division(a, b):
     b = int(b)
     return int(a) / int(b)
 
+def sq(a):
+    a = int(a)
+    return int(a) * int(a)
+
 
 class Calculator:
     result = 0
