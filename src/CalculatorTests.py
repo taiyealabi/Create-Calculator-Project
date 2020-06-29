@@ -20,9 +20,10 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.result, int(row['Result']))
 
     def test_subtract_method_calculator(self):
-        calculator = Calculator
-        self.assertEqual(calculator.subtract(2, 2), 0)
-        self.assertEqual(calculator.result, 0)
+        test_data = CsvReader('src/subtraction.csv').data
+        for role in test_data:
+            self.assertEqual(self.calculator.subtract((row['Value 1']), ((row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
 if __name__ == '__main__':
     unittest.main()
